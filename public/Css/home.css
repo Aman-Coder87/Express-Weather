@@ -1,0 +1,393 @@
+* ,
+*::before ,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+  --main-white: #f1f2f2;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#64A3E9 ,#021B79 );
+}
+/* Working with main Section Directly Connected With Express App and hbs file */
+.country {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.country .place {
+    color:  var(--main-white);
+    font-size: 3rem;
+}
+
+.country .country-child {
+    color:  var(--main-white);
+    font-size: 1.1rem;
+    word-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
+    margin-top: 0.6rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.temp {
+    position: relative;
+}
+
+.temp-c {
+    color: var(--main-white);
+    font-size: 12rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.temp .cloud {
+    width: 23rem;
+    height: 23rem;
+    object-fit: cover;
+    position: absolute;
+    left: 14%;
+    top: 26%;
+    opacity: .8;
+    animation: cloud 2.5s linear infinite;
+}
+
+@keyframes cloud {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Working With Hero Section of index.hbs FILE .. */
+.hero { 
+    width: 29rem;
+    height: 100%;
+    min-height: 120vh;
+    padding: 0 0.6rem;
+    margin: 15rem auto 0 auto;
+    background: #f1f1f1;
+    border-radius: 2.8rem 2.8rem 0 0 ;
+    overflow: hidden;
+}
+
+.head {
+    display: flex;
+    margin-top: 1.2rem;
+}
+
+.head .mrng {
+    margin: 1rem 0 0 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 950;
+}
+
+.head .land {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+.wind {
+    width: auto;
+    height: 0;
+    text-align: left;
+    margin-left: 1rem;
+    padding: 0;
+    font-weight: 950;
+    color: var(--main-white);
+}
+
+.hero .date {
+    margin: 1rem 0 0 3rem;
+    color: #ccc;
+    font-size: 1.4rem;
+    font-weight: 950;
+}
+
+/* Country Css // Section That shows temputure info of different countries */
+
+.hero .planet {
+    display: flex;
+    width: auto;
+    height: 19rem;
+    margin: 3rem 0 2rem 0;
+    overflow-x: scroll;
+    padding: 0 1rem;
+}
+
+.hero .planet::-webkit-scrollbar {
+  display: none;
+}
+
+.hero .planet .container {
+    width: 23rem;
+    height: 19rem;
+    margin: 0 1.5rem;
+    border-radius: 1.7rem;
+    background: #DDECF6;
+}
+
+.hero .planet .container .time {
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+    margin-top: -1rem;
+    background: #f1f2f2;
+    color: #ccc;
+    border-radius: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.hero .planet .container .place {
+    margin: 1.2rem 2.5rem;
+    color: #ccc;
+    font-size: 2.5rem;
+}
+
+.hero .planet .container .temp {
+    display: flex;
+    align-items: center;
+}
+
+.hero .planet .container .temp h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.hero .planet .container .temp img {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 3rem;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+/* places Css // Section That shows Temputure info of Near By Places  */
+
+.hero .near-by {
+    display: flex;
+    width: auto;
+    height: 12rem;
+    margin: 3rem 0 2rem 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 0 1rem;
+}
+
+.hero .near-by::-webkit-scrollbar {
+  display: none;
+}
+
+.hero .near-by-head {
+    margin: 1rem 0 0 2rem;
+    font-size: 2rem;
+}
+
+.hero .near-by .container {
+    width: 22rem;
+    height: 100%;
+    margin: 0 1.5rem;
+    border-radius: 1.7rem;
+    background: #DDECF6;
+}
+
+.hero .near-by .container .place {
+    margin: 1.2rem 2.5rem;
+    color: #ccc;
+    font-size: 2.5rem;
+}
+
+.hero .near-by .container .temp {
+    display: flex;
+    align-items: center;
+}
+
+.hero .near-by .container .temp h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.hero .near-by .container .temp img {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 3rem;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+
+
+/* Footer Section // All Styles Code Of Footer Section Goes Here  */
+
+#footer {
+    position: relative;
+    width: 29rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+#footer .footer-section {
+    position: fixed !important;
+    top: 90%;
+    min-width: 29rem;
+    min-height: 7rem;
+    background: var(--main-white);
+    z-index: 5;
+    border-radius: 2.8rem 2.8rem 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .7;
+}
+
+#footer .home {
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+    margin-top: -0.5rem;
+    opacity: .7;
+}
+
+
+/* //  ---  End Of Mobile Devices Codes  ---  // */
+
+@media (orientation: landscape) , screen and (min-width : 678px) {
+    
+    body { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    /* Main Container Stylesheet Code Goes Here */
+    .main-container {
+        width: 48%;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    .main-container .country {
+        margin-top: 1.9rem;
+    }
+    
+    .main-container .country .place {
+        font-size: 2.5rem;
+    }
+    
+    .main-container .temp {
+        margin-top: 0;
+    }
+    
+    .main-container .wind {
+        margin: 5rem auto 0 1rem;
+    }
+    
+    .main-container .temp .cloud {
+        width: 17rem;
+        height: 17rem;
+        left: 12%;
+    }
+    
+    /* Hero Section Stylesheet Code Goes Here */
+    .hero {
+        width: 48%;
+        margin: 1.7rem 0 0 50%;
+    }
+}
+
+/*  ---  End Of Mobile View Landslide Stylesheet Code  ---  */
+
+/* -- Desktop site Respinsive Code Goes Here -- */
+@media screen and (min-width : 768px) {
+    
+    /* Main Container Media Query */
+    .main-container .country .place {
+        font-size: 5rem;
+    }
+    
+    .main-container .country-child {
+        font-size: 2rem;
+    }
+    
+    .main-container .temp-c {
+        font-size: 17rem;
+    }
+    
+    .main-container .temp .cloud {
+        width: 27rem;
+        height: 27rem;
+        top: 23%;
+        left: 25%;
+    }
+    
+    .main-container .wind {
+        font-size: 1.7rem;
+    }
+    
+    /* Hero Section Media Query */
+    .hero .mrng {
+        font-size: 5rem;
+    }
+    
+    .hero .land {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    .hero .date {
+        font-size: 2.7rem;
+    }
+    
+    .hero .planet .container {
+        width: 27rem;
+    }
+    
+    .hero .near-by-head {
+        font-size: 2.2rem;
+    }
+    
+    .hero .near-by .container {
+        width: 25rem;
+    }
+}
+
+/*  ---  Responsive Stylesheet Code for Desktop Site Goes Here  ---  */ 
+@media screen and (min-width : 678px) {
+    
+}

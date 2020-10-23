@@ -1,0 +1,17 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A Website that shows the temputure and every info of any country releated to weather , web application created with the help of node js and express js as a backend and weather api from google to fetch the every data needed for this web application , Made With Love. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DevAman",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "requests": "^0.3.0"
+  }
+}

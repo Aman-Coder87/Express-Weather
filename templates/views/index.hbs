@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!-- Google fonts Joesfin -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- linking local stylesheet files -->
+    <link rel="stylesheet" href="Css/home.css" />
+    <!-- webpage Title and favicon Goes here .. -->
+    <title>Weather App</title>
+</head>
+<body>
+
+    <!-- Main Body Part Connected Directly through Express App -->
+    <div class="main-container">
+        <div class="country">
+            <h2 class="place"> {{place}}, {{countryName}}</h2>
+            <h4 class="country-child"> {{lon}} longitude / {{lat}} latitude</h4>
+        </div>
+        <div class="temp">
+            <h1 class="temp-c">{{temp}}°</h1>
+            <img class="cloud" src="Img/cloud.png" />
+        </div>
+        <div class="wind">
+            <h2 class="wind"> Wind <br> {{wind}} km/h </h2>
+        </div>
+    </div>
+
+    <!-- Hero Section specially working with local javascript File -->
+    <div class="hero">
+        <div class="head">
+            <h2 class="mrng"> Good <br> {{greeting}} </h2>
+            <img class="land" src="Img/logo.png" />
+        </div>
+        <div class="wind">
+            <h2 class="wind"> Wind <br> 9 km/h </h2>
+        </div>
+        <h2 class="date"> {{date}} {{months}}, {{day}} </h2>
+
+        <!-- Country Tempreture Section Shows Tempreture Details of Dufferent Countries  -->
+        <div class="planet">
+            <div class="container">
+                <h2 class="place"> USA </h2>
+                <div class="temp">
+                    <h1> <span id="Usa"></span>°C</h1>
+                    <img src="Img/sun.png" />
+                </div>
+                <div class="time">
+                    <h2> <span id="lonUsa"></span> lon / <span id="latUsa"></span> lat </h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!--   Near By Places // Shows weather info Of Near By Places -->
+        <h2 class="near-by-head"> Near By</h2>
+        <div class="near-by">
+            <div class="container">
+                <h2 class="place"> Lalitpur </h2>
+                <div class="temp">
+                    <h1> <span id="Lalitpur"></span>°F</h1>
+                    <img src="Img/cloud.png" />
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="place"> Bhaktapur </h2>
+                <div class="temp">
+                    <h1> <span id="Bhaktapur"></span>°F</h1>
+                    <img src="Img/cloud.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER section  -->
+    <!--
+            <footer id="footer">
+                <div class="footer-section">
+                    <img class="home" src="Img/home.jpg" />
+                </div>
+            </footer>
+        -->
+    <!-- Local javascript file Goes Here -->
+    <script src="Js/home.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
